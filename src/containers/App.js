@@ -73,7 +73,7 @@ function App(props) {
       <CssBaseline />
       <AppBar />
       <main>
-        //{this.props.children}
+        <Shop />
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
