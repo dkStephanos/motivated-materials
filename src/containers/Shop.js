@@ -1,26 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import AppBar from '../components/AppBar.js';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-  appBar: {
-    position: 'relative',
-  },
-  icon: {
-    marginRight: theme.spacing.unit * 2,
-  },
   heroUnit: {
     backgroundColor: theme.palette.background.paper,
   },
@@ -55,10 +45,6 @@ const styles = theme => ({
   },
   cardContent: {
     flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing.unit * 6,
   },
 });
 
