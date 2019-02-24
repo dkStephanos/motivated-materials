@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Shop from './Shop.js';
+import Checkout from './Checkout.js';
 
 const styles = theme => ({
   appBar: {
@@ -27,7 +28,7 @@ function App(props) {
       <CssBaseline />
       <AppBar />
       <main>
-        <Shop />
+        {props.children}
       </main>
       {/* Footer */}
       <footer className={classes.footer}>

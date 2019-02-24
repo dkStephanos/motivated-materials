@@ -6,15 +6,15 @@ import { store } from "./store.js";
 
 import App from "./containers/App";
 import Shop from "./containers/Shop";
+import Checkout from "./containers/Checkout";
 
 const Routes = props => (
   <Provider store={store}>
     <Router>
-      <App>
-        <Switch>
+        <App>
+          <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/" component={Shop} />
-        </Switch>
-      </App>
+        </App>
     </Router>
   </Provider>
 );
