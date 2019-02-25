@@ -19,8 +19,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+    textAlign: "center",
   },
   title: {
     display: 'none',
@@ -77,9 +76,7 @@ function SearchAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <AppMenu />
-          </IconButton>
+          <AppMenu className={classes.menuButton}/>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             Material-UI
           </Typography>

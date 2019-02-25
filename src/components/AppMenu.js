@@ -4,23 +4,22 @@ import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = theme => ({
   root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    textAlign: "center",
+    paddingRight: "10%",
   },
 });
 
 const options = [
-  'Show some love to Material-UI',
-  'Show all notification content',
-  'Hide sensitive notification content',
-  'Hide all notification content',
+  'Home',
+  'Shop',
+  'Checkout',
 ];
 
 class AppMenu extends React.Component {
@@ -47,20 +46,16 @@ class AppMenu extends React.Component {
 
     return (
       <div className={classes.root}>
-        <List component="nav">
-          <ListItem
+          <IconButton
             button
             aria-haspopup="true"
             aria-controls="lock-menu"
             aria-label="When device is locked"
             onClick={this.handleClickListItem}
           >
-            <ListItemText
-              primary="Home"
-              secondary={options[this.state.selectedIndex]}
-            />
-          </ListItem>
-        </List>
+            <MenuIcon />
+          </IconButton>
+
         <Menu
           id="lock-menu"
           anchorEl={anchorEl}
@@ -70,7 +65,6 @@ class AppMenu extends React.Component {
           {options.map((option, index) => (
             <MenuItem
               key={option}
-              disabled={index === 0}
               selected={index === this.state.selectedIndex}
               onClick={event => this.handleMenuItemClick(event, index)}
             >
