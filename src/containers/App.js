@@ -4,8 +4,6 @@ import AppBar from '../components/AppBar.js';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import Shop from './Shop.js';
-import Checkout from './Checkout.js';
 
 const styles = theme => ({
   appBar: {
